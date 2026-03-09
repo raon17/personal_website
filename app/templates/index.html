@@ -3,17 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>William K Portfolio</title>
+  <title>William Kim — Portfolio</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" aria-label="Switch theme" title="Switch theme">
+    <span class="toggle-tooltip">pixel mode</span>
+    <i class="fas fa-terminal"></i>
+  </button>
+
+  <!-- Nav -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#about">William Kim</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
   <!-- About -->
   <section id="about">
-    <img src="{{ url_for('static', filename='profile.jpg') }}" alt="William K" class="profile-img">
-    <h1>William K</h1>
-    <p>Data Analyst &nbsp;|&nbsp; Python &amp; SQL Developer</p>
+    <div class="about-inner">
+      <img src="{{ url_for('static', filename='profile.jpg') }}" alt="William Kim" class="profile-img">
+      <div class="about-text">
+        <p class="about-label">Hi, I'm</p>
+        <h1>William Kim</h1>
+        <p class="about-role">Data Analyst &nbsp;·&nbsp; Aspiring Data Engineer &nbsp;·&nbsp; Python &amp; SQL</p>
+        <p class="about-bio">
+          I'm a data analyst with professional experience turning raw data into clear,
+          actionable insights. Outside of work, I've been deliberately expanding my
+          technical toolkit, building projects with Python, SQL and completing
+          coursework from universities and industry certificates. I'm now looking to move into a role
+          where I can apply both sides: the analytical thinking I've built at work and the
+          engineering skills I've developed on my own.
+        </p>
+        <div class="about-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Skills -->
@@ -24,14 +66,45 @@
       <div class="skill"><i class="fas fa-database"></i><span>SQL</span></div>
       <div class="skill"><i class="fas fa-server"></i><span>Flask</span></div>
       <div class="skill"><i class="fas fa-cogs"></i><span>Airflow</span></div>
-      <div class="skill"><i class="fas fa-cloud"></i><span>AWS/GCP</span></div>
+      <div class="skill"><i class="fas fa-cloud"></i><span>AWS / GCP</span></div>
       <div class="skill"><i class="fab fa-docker"></i><span>Docker</span></div>
+      <div class="skill"><i class="fas fa-cube"></i><span>dbt</span></div>
+      <div class="skill"><i class="fas fa-snowflake"></i><span>Snowflake</span></div>
+      <div class="skill"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+      <div class="skill"><i class="fas fa-database"></i><span>MySQL</span></div>
+      <div class="skill"><i class="fas fa-table"></i><span>BigQuery</span></div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <p class="section-sub">Academic background</p>
+    <div class="education-card">
+      <div class="education-card__left">
+        <div class="education-card__institution">
+          <i class="fas fa-university"></i>
+          <span class="education-card__school">University of Sydney</span>
+        </div>
+        <p class="education-card__period"><i class="fas fa-calendar-alt"></i> 2014 – 2017</p>
+        <p class="education-card__degree">Bachelor of Economics</p>
+      </div>
+      <div class="education-card__right">
+        <p class="education-card__detail">Majored in statistics and econometrics with a focus on regression modelling and quantitative analysis</p>
+        <div class="education-card__tags">
+          <span class="stack-tag">Statistics</span>
+          <span class="stack-tag">Regression Modelling</span>
+          <span class="stack-tag">Econometrics</span>
+          <span class="stack-tag">Quantitative Analysis</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
+    <p class="section-sub">Personal and self-directed builds</p>
     <div class="projects-grid">
 
       <div class="project-card">
@@ -64,6 +137,7 @@
   <!-- Certifications -->
   <section id="certifications">
     <h2>Certifications</h2>
+    <p class="section-sub">Vendor and institution issued credentials</p>
     <div class="certs-table-container">
       <table class="certs-table">
         <thead>
@@ -82,34 +156,64 @@
             <td><a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
           </tr>
           <tr>
-            <td>AWS Certified Data Analytics</td>
-            <td class="desc-cell">Expertise in designing and building AWS data lakes, pipelines, and analytics solutions at scale.</td>
-            <td><div class="stacks-cell"><span class="stack-tag">S3</span><span class="stack-tag">Glue</span><span class="stack-tag">Redshift</span><span class="stack-tag">Athena</span><span class="stack-tag">Kinesis</span></div></td>
-            <td><a href="https://aws.amazon.com/certification/certified-data-analytics-specialty/" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
+            <td>Microsoft Python Developer Professional Certificate</td>
+            <td class="desc-cell">Covers Python programming fundamentals through to building real-world applications, automation, and data workflows using Microsoft tooling.</td>
+            <td><div class="stacks-cell"><span class="stack-tag">Python</span><span class="stack-tag">Azure</span><span class="stack-tag">VS Code</span><span class="stack-tag">Automation</span></div></td>
+            <td><a href="https://www.coursera.org/professional-certificates/microsoft-python-developer" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
           </tr>
           <tr>
-            <td>Certified Data Engineer — Google</td>
-            <td class="desc-cell">Design, build, and operationalize data processing systems on Google Cloud Platform.</td>
-            <td><div class="stacks-cell"><span class="stack-tag">BigQuery</span><span class="stack-tag">Dataflow</span><span class="stack-tag">Pub/Sub</span><span class="stack-tag">Cloud Storage</span></div></td>
-            <td><a href="https://cloud.google.com/certification/data-engineer" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
+            <td>Microsoft SQL Server Professional Certificate</td>
+            <td class="desc-cell">SQL query fundamentals through to advanced database management — design, security, performance tuning, and BI integration using T-SQL and SQL Server.</td>
+            <td><div class="stacks-cell"><span class="stack-tag">T-SQL</span><span class="stack-tag">SQL Server</span><span class="stack-tag">SSMS</span><span class="stack-tag">Database Design</span><span class="stack-tag">Performance Tuning</span></div></td>
+            <td><a href="https://www.coursera.org/professional-certificates/microsoft-sql-server" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
           </tr>
           <tr>
-            <td>Data Engineering Foundations by IBM on Coursera</td>
-            <td class="desc-cell">Learn the fundamentals of data engineering and how to build scalable data processing systems.</td>
+            <td>Microsoft Power BI Data Analyst Professional Certificate</td>
+            <td class="desc-cell">Data modelling, DAX, report building, and publishing insights using Power BI — aligned with the PL-300 exam.</td>
+            <td><div class="stacks-cell"><span class="stack-tag">Power BI</span><span class="stack-tag">DAX</span><span class="stack-tag">Data Modelling</span><span class="stack-tag">Power Query</span></div></td>
+            <td><a href="https://www.coursera.org/professional-certificates/microsoft-power-bi-data-analyst" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
+          </tr>
+          <tr>
+            <td>Microsoft Power BI Developer and Architect Professional Certificate</td>
+            <td class="desc-cell">Advanced Power BI — enterprise-level data architecture, complex data models, gateway configuration, and BI solution design.</td>
+            <td><div class="stacks-cell"><span class="stack-tag">Power BI</span><span class="stack-tag">DAX</span><span class="stack-tag">Data Architecture</span><span class="stack-tag">Azure</span><span class="stack-tag">Power Query</span></div></td>
+            <td><a href="https://www.coursera.org/professional-certificates/microsoft-power-bi-developer" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses">
+    <h2>Courses</h2>
+    <p class="section-sub">Completed coursework from universities and online platforms</p>
+    <div class="certs-table-container">
+      <table class="certs-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Stacks</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data Engineering Foundations · IBM / Coursera</td>
+            <td class="desc-cell">Fundamentals of the data engineering ecosystem, ETL pipelines, Python for data, and relational databases.</td>
             <td><div class="stacks-cell"><span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">NumPy</span><span class="stack-tag">SQL</span><span class="stack-tag">MySQL</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">IBM Db2</span><span class="stack-tag">ETL</span></div></td>
-            <td><a href="{{ url_for('static', filename='certificates/ibm-data-engineering.pdf') }}" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> View
-                </a></td>
+            <td><a href="https://coursera.org/share/23cfef2e0de7cb7f433dd18758d6e7a4" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
           </tr>
           <tr>
-            <td>Stanford Online — Relational Databases and SQL</td>
-            <td class="desc-cell">Covers relational database design, SQL querying, and core database concepts offered by Stanford University</td>
+            <td>Relational Databases and SQL · Stanford Online</td>
+            <td class="desc-cell">Relational database design, SQL querying, schema design, and core database concepts from Stanford University.</td>
             <td><div class="stacks-cell"><span class="stack-tag">SQL</span><span class="stack-tag">Relational DB</span><span class="stack-tag">Schema Design</span></div></td>
-            <td><a href="{{ url_for('static', filename='certificates/Stanford-SQL-0001.pdf') }}" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
+            <td><a href="{{ url_for('static', filename='certificates/Standord-SQL-0001.pdf') }}" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
           </tr>
           <tr>
-            <td>Harvard Online - Introduction to Databases with SQL</td>
-            <td class="desc-cell">Covers querying, relating, and designing relational databases. Includes normalization, indexes, views, transactions, and connecting SQL with Python</td>
+            <td>CS50's Introduction to Databases with SQL · Harvard</td>
+            <td class="desc-cell">Querying, relating, and designing relational databases. Covers normalization, indexes, views, transactions, and connecting SQL with Python.</td>
             <td><div class="stacks-cell"><span class="stack-tag">SQL</span><span class="stack-tag">SQLite</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">MySQL</span><span class="stack-tag">Python</span></div></td>
             <td><a href="{{ url_for('static', filename='certificates/Harvard-SQL-CS50.pdf') }}" target="_blank"><i class="fas fa-external-link-alt"></i> View</a></td>
           </tr>
@@ -121,6 +225,55 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
+    <p class="section-sub">Open to new opportunities — feel free to reach out.</p>
     <div class="contact-buttons">
-      <a href="/cdn-cgi/l/email-protection#87f0eeebebeceeeab7b6b6b0c7a9e4e8ea" class="btn">Email</a>
-      <a href="https://github.com/raon17" class="btn" target="_blank">GitHub</a>
+      <a href="/cdn-cgi/l/email-protection#cbbca2a7a7a0a2a6fbfafafc8be5a8a4a6" class="btn btn-primary">
+        <i class="fas fa-envelope"></i> Email Me
+      </a>
+      <a href="https://github.com/raon17" class="btn btn-outline" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 William Kim</p>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // ── Nav scroll + active link ──
+    const navbar = document.getElementById('navbar');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 80) current = sec.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // ── Mobile menu ──
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+
+    // ── Theme toggle ──
+    const toggleBtn = document.getElementById('theme-toggle');
+    const icon = toggleBtn.querySelector('i');
+    const tooltip = toggleBtn.querySelector('.toggle-tooltip');
+    let pixelMode = false;
+
+    toggleBtn.addEventListener('click', () => {
+      pixelMode = !pixelMode;
+      document.body.classList.toggle('pixel-mode', pixelMode);
+      icon.className = pixelMode ? 'fas fa-gamepad' : 'fas fa-terminal';
+      tooltip.textContent = pixelMode ? 'terminal mode' : 'pixel mode';
+    });
+  </script>
+</body>
+</html>
